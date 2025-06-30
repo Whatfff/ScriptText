@@ -1,0 +1,141 @@
+{
+  "name": "Script Text Dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#1e1e1e",
+    "editor.foreground": "#d4d4d4",
+    "editor.lineHighlightBackground": "#2a2a2a",
+    "editor.selectionBackground": "#264f78",
+    "editor.inactiveSelectionBackground": "#3a3d41"
+  },
+  "tokenColors": [
+    {
+      "name": "Comments",
+      "scope": [
+        "comment.line.double-slash.scripttext",
+        "comment.block.scripttext"
+      ],
+      "settings": {
+        "foreground": "#6a9955"
+      }
+    },
+    {
+      "name": "UI Type",
+      "scope": [
+        "support.class.ui-type.scripttext"
+      ],
+      "settings": {
+        "foreground": "#569cd6",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Data Tag",
+      "scope": [
+        "support.type.data-tag.scripttext"
+      ],
+      "settings": {
+        "foreground": "#4ec9b0"
+      }
+    },
+    {
+      "name": "Voice Type",
+      "scope": [
+        "support.constant.voice-type.scripttext"
+      ],
+      "settings": {
+        "foreground": "#dcdcaa"
+      }
+    },
+    {
+      "name": "Speaker",
+      "scope": [
+        "variable.parameter.speaker.scripttext"
+      ],
+      "settings": {
+        "foreground": "#ce9178",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "$CONVERSATION Tag",
+      "scope": [
+        "entity.name.tag.conversation.scripttext"
+      ],
+      "settings": {
+        "foreground": "#ffb454",
+        "fontStyle": "bold underline"
+      }
+    },
+    {
+      "name": "Numbers",
+      "scope": [
+        "constant.numeric.option-id.scripttext",
+        "constant.numeric.qid.scripttext",
+        "constant.numeric.scripttext"
+      ],
+      "settings": {
+        "foreground": "#b5cea8"
+      }
+    },
+    {
+      "name": "Keywords",
+      "scope": [
+        "keyword.control.special.scripttext",
+        "keyword.control.data.scripttext"
+      ],
+      "settings": {
+        "foreground": "#c586c0",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Content",
+      "scope": [
+        "string.unquoted.content.scripttext"
+      ],
+      "settings": {
+        "foreground": "#d4d4d4"
+      }
+    },
+    {
+      "name": "Parameter Keys",
+      "scope": [
+        "constant.language.parameter-key.scripttext"
+      ],
+      "settings": {
+        "foreground": "#4fc1ff"
+      }
+    },
+    {
+      "name": "Parameter Values",
+      "scope": [
+        "string.unquoted.parameter-value.scripttext"
+      ],
+      "settings": {
+        "foreground": "#ce9178"
+      }
+    },
+    {
+      "name": "Data Blocks",
+      "scope": [
+        "meta.data-block.scripttext"
+      ],
+      "settings": {
+        "foreground": "#d7ba7d"
+      }
+    },
+    {
+      "name": "Dialogue Structure",
+      "scope": [
+        "meta.dialogue.scripttext",
+        "meta.question.scripttext",
+        "meta.answer.scripttext",
+        "meta.conversation.scripttext"
+      ],
+      "settings": {
+        "foreground": "#9cdcfe"
+      }
+    }
+  ]
+} 

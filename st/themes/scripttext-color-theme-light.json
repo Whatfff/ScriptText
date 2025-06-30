@@ -1,0 +1,93 @@
+{
+  "name": "Script Text Light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#ffffff",
+    "editor.foreground": "#333333",
+    "editor.lineHighlightBackground": "#f0f0f0",
+    "editor.selectionBackground": "#cce2ff",
+    "editor.inactiveSelectionBackground": "#e5e5e5"
+  },
+  "tokenColors": [
+    {
+      "name": "Comments",
+      "scope": [
+        "comment.line.double-slash.scripttext",
+        "comment.block.scripttext"
+      ],
+      "settings": { "foreground": "#008000" }
+    },
+    {
+      "name": "UI Type",
+      "scope": ["support.class.ui-type.scripttext"],
+      "settings": { "foreground": "#0057b7", "fontStyle": "bold" }
+    },
+    {
+      "name": "Data Tag",
+      "scope": ["support.type.data-tag.scripttext"],
+      "settings": { "foreground": "#008b8b" }
+    },
+    {
+      "name": "Voice Type",
+      "scope": ["support.constant.voice-type.scripttext"],
+      "settings": { "foreground": "#b8860b" }
+    },
+    {
+      "name": "Speaker",
+      "scope": ["variable.parameter.speaker.scripttext"],
+      "settings": { "foreground": "#a31515", "fontStyle": "bold" }
+    },
+    {
+      "name": "$CONVERSATION Tag",
+      "scope": ["entity.name.tag.conversation.scripttext"],
+      "settings": { "foreground": "#e67e22", "fontStyle": "bold underline" }
+    },
+    {
+      "name": "Numbers",
+      "scope": [
+        "constant.numeric.option-id.scripttext",
+        "constant.numeric.qid.scripttext",
+        "constant.numeric.scripttext"
+      ],
+      "settings": { "foreground": "#098658" }
+    },
+    {
+      "name": "Keywords",
+      "scope": [
+        "keyword.control.special.scripttext",
+        "keyword.control.data.scripttext"
+      ],
+      "settings": { "foreground": "#af00db", "fontStyle": "bold" }
+    },
+    {
+      "name": "Content",
+      "scope": ["string.unquoted.content.scripttext"],
+      "settings": { "foreground": "#333333" }
+    },
+    {
+      "name": "Parameter Keys",
+      "scope": ["constant.language.parameter-key.scripttext"],
+      "settings": { "foreground": "#267f99" }
+    },
+    {
+      "name": "Parameter Values",
+      "scope": ["string.unquoted.parameter-value.scripttext"],
+      "settings": { "foreground": "#a31515" }
+    },
+    {
+      "name": "Data Blocks",
+      "scope": ["meta.data-block.scripttext"],
+      "settings": { "foreground": "#b8860b" }
+    },
+    {
+      "name": "Dialogue Structure",
+      "scope": [
+        "meta.dialogue.scripttext",
+        "meta.question.scripttext",
+        "meta.answer.scripttext",
+        "meta.conversation.scripttext"
+      ],
+      "settings": { "foreground": "#0057b7" }
+    }
+  ]
+} 

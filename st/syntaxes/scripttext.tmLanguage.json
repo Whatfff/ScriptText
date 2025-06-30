@@ -1,0 +1,206 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Script Text",
+  "scopeName": "source.scripttext",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#dialogue-params"
+    },
+    {
+      "include": "#question-params"
+    },
+    {
+      "include": "#answer-params"
+    },
+    {
+      "include": "#conversation-params"
+    },
+    {
+      "include": "#data-block"
+    },
+    {
+      "include": "#special-syntax"
+    },
+    {
+      "include": "#parameters"
+    },
+    {
+      "include": "#conversation-tag"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.scripttext",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.scripttext",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "dialogue-params": {
+      "patterns": [
+        {
+          "name": "meta.dialogue.scripttext",
+          "match": "#\\[\\(([A-Z0-9]+)\\)-\\(([A-Z0-9|: ]+)\\)\\]\\-\\[([A-Za-z0-9]+)\\]<([^>]+)>~:",
+          "captures": {
+            "1": { "name": "support.class.ui-type.scripttext" },
+            "2": { "name": "support.type.data-tag.scripttext" },
+            "3": { "name": "support.constant.voice-type.scripttext" },
+            "4": { "name": "variable.parameter.speaker.scripttext" }
+          }
+        },
+        {
+          "name": "meta.dialogue.scripttext",
+          "match": "#\\[([A-Z0-9]+)\\]-\\(([A-Z0-9|: ]+)\\)\\]-\\[([A-Za-z0-9]+)\\]~:",
+          "captures": {
+            "1": { "name": "support.class.ui-type.scripttext" },
+            "2": { "name": "support.type.data-tag.scripttext" },
+            "3": { "name": "support.constant.voice-type.scripttext" }
+          }
+        },
+        {
+          "name": "meta.dialogue.scripttext",
+          "match": "#\\[([A-Z0-9]+)\\]-\\(([A-Z0-9|: ]+)\\)\\]~:",
+          "captures": {
+            "1": { "name": "support.class.ui-type.scripttext" },
+            "2": { "name": "support.type.data-tag.scripttext" }
+          }
+        },
+        {
+          "name": "meta.dialogue.scripttext",
+          "match": "#\\[([A-Z0-9]+)\\]-\\[([A-Z0-9|: ]+)\\]-\\[([A-Za-z0-9]+)\\]<([^>]+)>~:",
+          "captures": {
+            "1": { "name": "support.class.ui-type.scripttext" },
+            "2": { "name": "support.type.data-tag.scripttext" },
+            "3": { "name": "support.constant.voice-type.scripttext" },
+            "4": { "name": "variable.parameter.speaker.scripttext" }
+          }
+        }
+      ]
+    },
+    "question-params": {
+      "patterns": [
+        {
+          "name": "meta.question.scripttext",
+          "match": "#\\[\\(([A-Z0-9]+)\\)-\\(([A-Z0-9|: ]+)\\)\\]\\-\\[([A-Za-z0-9]+)\\]<([^>]+)>~:",
+          "captures": {
+            "1": { "name": "support.class.ui-type.scripttext" },
+            "2": { "name": "support.type.data-tag.scripttext" },
+            "3": { "name": "support.constant.voice-type.scripttext" },
+            "4": { "name": "variable.parameter.speaker.scripttext" }
+          }
+        },
+        {
+          "name": "meta.question-option.scripttext",
+          "match": "-\\(([@0-9]+)\\)::\\[([A-Z0-9]+)\\]-\\[([A-Z0-9|: ]+)\\]-\\[([A-Za-z0-9]+)\\]<([^>]+)>~:",
+          "captures": {
+            "1": { "name": "constant.numeric.option-id.scripttext" },
+            "2": { "name": "support.class.ui-type.scripttext" },
+            "3": { "name": "support.type.data-tag.scripttext" },
+            "4": { "name": "support.constant.voice-type.scripttext" },
+            "5": { "name": "variable.parameter.speaker.scripttext" }
+          }
+        }
+      ]
+    },
+    "answer-params": {
+      "patterns": [
+        {
+          "name": "meta.answer.scripttext",
+          "match": "#\\[\\(([A-Z0-9]+)\\)-\\(([A-Z0-9|: 0-9]+)\\)\\]\\-\\[([A-Za-z0-9]+)\\]<([^>]+)>~\\(([@0-9]+)\\):",
+          "captures": {
+            "1": { "name": "support.class.ui-type.scripttext" },
+            "2": { "name": "support.type.data-tag.scripttext" },
+            "3": { "name": "support.constant.voice-type.scripttext" },
+            "4": { "name": "variable.parameter.speaker.scripttext" },
+            "5": { "name": "constant.numeric.qid.scripttext" }
+          }
+        }
+      ]
+    },
+    "conversation-params": {
+      "patterns": [
+        {
+          "name": "meta.conversation-dialogue.scripttext",
+          "match": "#\\[\\(([A-Z0-9]+)\\)-\\(([A-Z0-9|: ]+)\\)\\]\\-\\[([A-Za-z0-9]+)\\]<([^>]+)>~:",
+          "captures": {
+            "1": { "name": "support.class.ui-type.scripttext" },
+            "2": { "name": "support.type.data-tag.scripttext" },
+            "3": { "name": "support.constant.voice-type.scripttext" },
+            "4": { "name": "variable.parameter.speaker.scripttext" }
+          }
+        }
+      ]
+    },
+    "data-block": {
+      "patterns": [
+        {
+          "name": "meta.data-block.scripttext",
+          "begin": "\\{",
+          "end": "\\}",
+          "patterns": [
+            {
+              "name": "keyword.control.data.scripttext",
+              "match": "\\b(DataTag|Action|Using|Function|QID|Ask|Reply)\\b"
+            },
+            {
+              "name": "constant.numeric.scripttext",
+              "match": "\\b[0-9]+\\b"
+            },
+            {
+              "name": "string.quoted.double.scripttext",
+              "begin": "\"",
+              "end": "\"",
+              "patterns": [
+                {
+                  "name": "constant.character.escape.scripttext",
+                  "match": "\\\\."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "conversation-tag": {
+      "patterns": [
+        {
+          "name": "entity.name.tag.conversation.scripttext",
+          "match": "\\$CONVERSATION"
+        }
+      ]
+    },
+    "special-syntax": {
+      "patterns": [
+        {
+          "name": "keyword.control.special.scripttext",
+          "match": "\\b(询问|回复|特殊语法定义|参数定义)\\b"
+        },
+        {
+          "name": "keyword.control.special.scripttext",
+          "match": "\\b(Ask|Reply|Special syntax definitions|Parameter definitions)\\b"
+        }
+      ]
+    },
+    "parameters": {
+      "patterns": [
+        {
+          "name": "meta.parameter-definition.scripttext",
+          "match": "([A-Z0-9]+)-([^；]+)；",
+          "captures": {
+            "1": { "name": "constant.language.parameter-key.scripttext" },
+            "2": { "name": "string.unquoted.parameter-value.scripttext" }
+          }
+        }
+      ]
+    }
+  }
+} 

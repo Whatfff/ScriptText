@@ -1,0 +1,38 @@
+{
+  "name": "script-text",
+  "displayName": "Script Text",
+  "description": "Syntax highlighting for Script Text language (.st files)",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Themes"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "scripttext",
+      "aliases": ["Script Text", "scripttext", "st"],
+      "extensions": [".st"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "scripttext",
+      "scopeName": "source.scripttext",
+      "path": "./syntaxes/scripttext.tmLanguage.json"
+    }],
+    "themes": [
+      {
+        "label": "Script Text Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/scripttext-color-theme.json"
+      },
+      {
+        "label": "Script Text Light",
+        "uiTheme": "vs",
+        "path": "./themes/scripttext-color-theme-light.json"
+      }
+    ]
+  }
+}

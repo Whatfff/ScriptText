@@ -20,6 +20,12 @@
 
 ## 支持的语法元素
 
+### 语法定义
+```scripttext
+#[(UI类型)-(类型/数据标签)]-[声源/类型]<发言者>~: 内容 {数据标签/行为/用法/函数}
+#[(UIType)-(Type/DataTag)]-[Voice/Type]<Speaker>~: Content {DataTag/Action/Using/Function}
+```
+
 ### 基本对话语句
 ```scripttext
 #[(D1)-(D)]-[Default]<Ann>~: Hello, welcome! {Action: Speak}
